@@ -4,9 +4,13 @@
 A script which takes of floats as argument and return their sum
 """
 
-def sum_list(input_list: list[float]) -> float:
+from typing import List
+
+
+def sum_list(input_list: List[float]) -> float:
     """
-    A function that takes a list of float numbers as argument and return their sum as float
+    A function that takes a list of float numbers as argument
+    and return their sum as float
 
     Args:
         input-list: list[float]: list od float numbers

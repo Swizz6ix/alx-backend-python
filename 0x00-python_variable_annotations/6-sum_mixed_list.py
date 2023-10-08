@@ -4,11 +4,13 @@
 A script that takes a list made of both integers and floats, sum them up and the result as float
 """
 
-from typing import Union
 
-def sum_mixed_list(mxd_lst: Union[int, float]) -> float:
+from typing import Union, List
+
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """
-    A function returns a float from the sum of a list which is made up of both integers and floats
+    A function returns a float from the sum of a list which is
+    made up of both integers and floats
 
     Args:
         mxd_lst: Union[int, float]: the mixed list of both integers and floats

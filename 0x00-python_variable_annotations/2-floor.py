@@ -5,6 +5,7 @@ A script that returns an int value of a float using math.floor method
 """
 import math
 
+
 def floor(n: float) -> int:
     """
     returns the floor of a float number
@@ -12,7 +13,7 @@ def floor(n: float) -> int:
     Args:
         n (float)
 
-    Returns: 
+    Returns:
         int: the floor of the float number
     """
     return math.floor(n)
