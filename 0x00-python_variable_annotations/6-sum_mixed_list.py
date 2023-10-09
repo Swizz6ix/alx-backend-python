@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 """
-A script that takes a list made of both integers and floats, sum them up and the result as float
+A script that takes a list made of both integers and floats,
+sum them up and the result as float
 """
 
-
 from typing import Union, List
+
 
 def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """
