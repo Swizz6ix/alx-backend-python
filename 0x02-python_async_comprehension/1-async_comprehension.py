@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-A script that describe a coroutine that collects 
+A script that describe a coroutine that collects
 10 random numbers
 """
 import asyncio
