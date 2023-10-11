@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 A script for run time for parallel comprehensions
 """
@@ -13,5 +13,5 @@ async def measure_runtime() -> float:
     Describes runtime parallel comprehension
     """
     start_time = time.time()
-    await asyncio.gather(*(async_comprehension() for _ in range(4)))
+    await asyncio.gather(*[async_comprehension() for _ in range(4)])
     return time.time() - start_time
