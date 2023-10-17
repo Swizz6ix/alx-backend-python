@@ -13,5 +13,5 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Describes a function that executes multiple coroutines
     """
     tasks: List[int] = [wait_random(max_delay) for _ in range(n)]
-    delay: List[int]  = await asyncio.gather(*tasks)
+    delay: List[int] = await asyncio.gather(*tasks)
     return sorted(delay)
