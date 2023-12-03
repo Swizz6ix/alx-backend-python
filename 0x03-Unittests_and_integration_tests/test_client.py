@@ -16,8 +16,8 @@ class TesstGithubOrgClient(unittest.TestCase):
     Test fixtures for testing methods in GitHubOrgClient class
     """
     @parameterized.expand([
-        ('google', {'login': 'google'}),
-        ('abc', {'login': 'abc'}),
+        ('google', {'name': 'Google'}),
+        ('abc', {'name': 'abc'}),
     ])
     @patch('client.get_json')
     def test_org(self, org: str, resp: Dict, mocked_fxn: MagicMock) -> None:
@@ -36,9 +36,9 @@ class TesstGithubOrgClient(unittest.TestCase):
         with patch(
             "client.GithubOrgClient.org",
             new_callable=PropertyMock,
-        ) as mock_obj:
+        ) as mocked_fxn:
             url = "https://api.github.com/orgs/google/repos"
-            mock_org.return_value = {
+            mocked_fxn.return_value = {
                 'repos_url': url,
             }
             self.assertEqual(
