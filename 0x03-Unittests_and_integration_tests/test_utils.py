@@ -19,11 +19,12 @@ class TestAccessNestedMap(unittest.TestCase):
         ({'a': {'b': 2}}, ('a',), {'b': 2}),
         ({'a': {'b': 2}}, ('a', 'b'), 2),
     ])
-    def test_access_nested_map(self,
-                                nested_map: Mapping,
-                                path: Sequence,
-                                expected: Union[Dict, int]
-                            ) -> None:
+    def test_access_nested_map(
+        self,
+        nested_map: Mapping,
+        path: Sequence,
+        expected: Union[Dict, int]
+    ) -> None:
         """
         Test the method access_nested_map
         """
@@ -43,6 +44,7 @@ class TestAccessNestedMap(unittest.TestCase):
         """
         with self.assertRaises(KeyError, mgs=path):
             access_nested_map(nested_map, path)
+
 
 class TestGetJson(unittest.TestCase):
     """
@@ -66,6 +68,7 @@ class TestGetJson(unittest.TestCase):
             self.assertEqual(get_json(test_url), test_payload)
             mock_req_get.assert_called_once_with(test_url)
 
+
 class TestMemoize(unittest.TestCase):
     """
     The test fixture fir testing memoize method in util module.
@@ -75,7 +78,7 @@ class TestMemoize(unittest.TestCase):
         class TestClass:
             def a_method(self):
                 return 42
-            
+
             @memoize
             def a_property(self):
                 return self.a_method()
