@@ -11,7 +11,7 @@ from client import GithubOrgClient
 from fixtures import TEST_PAYLOAD
 
 
-class TesstGithubOrgClient(unittest.TestCase):
+class TestGithubOrgClient(unittest.TestCase):
     """
     Test fixtures for testing methods in GitHubOrgClient class
     """
